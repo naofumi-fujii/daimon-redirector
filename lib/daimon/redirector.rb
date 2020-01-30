@@ -27,6 +27,8 @@ module Daimon
           @env = environment
         end
 
+        # lookup for redirect rule by request_path.
+        # if rule found, redirect to destination.
         def response
           # FIXME: `RedirectRule` should be in this gem
           rule =
