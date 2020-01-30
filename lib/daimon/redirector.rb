@@ -1,5 +1,9 @@
 require "daimon/redirector/version"
 
+# Usage: add code below in `config/application.rb`
+#
+# `config.middleware.insert_before Rack::Runtime, Daimon::Redirector::Redirector`
+
 module Daimon
   module Redirector
     class Error < StandardError; end
