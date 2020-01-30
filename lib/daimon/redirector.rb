@@ -28,6 +28,7 @@ module Daimon
         end
 
         def response
+          # FIXME: `RedirectRule` should be in this gem
           rule =
             RedirectRule.find_from_cache_by(request_path: request_path)
 
@@ -42,6 +43,7 @@ module Daimon
 
         private
 
+        # FIXME: missing gem dependency `SimpleIDN`
         def request_host
           SimpleIDN.to_unicode(env["HTTP_HOST"].split(":").first)
         end
